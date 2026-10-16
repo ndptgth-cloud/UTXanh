@@ -2,6 +2,12 @@
 
 Website UTxanh — Nhóm 35, Trường Đại học Công nghệ Giao thông vận tải.
 
+## Cấu trúc
+
+- `index.html` — nội dung và cấu trúc trang.
+- `styles.css` — kiểu dáng và bố cục.
+- `script.js` — menu và chức năng tạo mã QR.
+
 ## Đăng website bằng GitHub Pages
 
 Trang chủ đã được chuẩn bị tại `index.html`. Để xuất bản:
