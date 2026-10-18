@@ -1,28 +1,10 @@
-const menuButton = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector("#nav-links");
-const qrDialog = document.querySelector("#qr-dialog");
+ const qrDialog = document.querySelector("#qr-dialog");
 const openQrButton = document.querySelector("#open-qr-dialog");
 const closeQrButton = document.querySelector("#close-qr-dialog");
 const qrStatus = document.querySelector("#qr-status");
 const qrCodeContainer = document.querySelector("#qr-code");
 const qrPageUrl = document.querySelector("#qr-page-url");
 const copyPageUrlButton = document.querySelector("#copy-page-url");
-
-menuButton.addEventListener("click", () => {
-  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-  menuButton.setAttribute("aria-expanded", String(!isOpen));
-  menuButton.setAttribute("aria-label", isOpen ? "Mở menu" : "Đóng menu");
-  navLinks.classList.toggle("is-open", !isOpen);
-});
-
-navLinks.addEventListener("click", (event) => {
-  if (event.target.closest("a")) {
-    navLinks.classList.remove("is-open");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Mở menu");
-  }
-});
-
 
 function loadQrGenerator() {
   if (window.QRCode) return Promise.resolve();
