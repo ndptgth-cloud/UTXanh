@@ -29,11 +29,17 @@
         <h1>Video từ Nhóm 35</h1>
         <p>Những hành động nhỏ, câu chuyện ý nghĩa của Nhóm 35.</p>
       </div>
-      <video class="video-player" controls playsinline preload="none" aria-label="Video từ Nhóm 35">
-        <source src="assets/video-player.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ phát video.
-      </video>
-      <p class="video-player-note">Bấm phát để xem. Để nghe tiếng, bật biểu tượng loa trên trình phát.</p>
+      <div class="video-player-shell">
+        <iframe
+          class="video-player-frame"
+          src="https://www.youtube.com/embed/lrSJqDVDbDM?controls=1&amp;playsinline=1&amp;rel=0"
+          title="Video từ Nhóm 35 — UTxanh"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-player-note">Dùng nút phát và biểu tượng loa trên thanh điều khiển YouTube để xem và chỉnh âm lượng.</p>
       <a class="button-secondary video-player-back" href="./#video">← Quay lại UTxanh</a>
     </article>
   </main>
