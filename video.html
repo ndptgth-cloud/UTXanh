@@ -30,18 +30,46 @@
         <p>Những hành động nhỏ, câu chuyện ý nghĩa của Nhóm 35.</p>
       </div>
       <div class="video-player-shell">
-        <iframe
-          class="video-player-frame"
-          src="https://www.youtube.com/embed/lrSJqDVDbDM?controls=1&amp;playsinline=1&amp;rel=0"
-          title="Video từ Nhóm 35 — UTxanh"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+        <div class="video-player-stage" id="video-player">
+          <iframe
+            class="video-player-frame"
+            id="video-player-frame"
+            src="https://www.youtube.com/embed/lrSJqDVDbDM?controls=0&amp;enablejsapi=1&amp;playsinline=1&amp;rel=0"
+            title="Video từ Nhóm 35 — UTxanh"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+          <img class="video-player-poster" src="https://i.ytimg.com/vi/lrSJqDVDbDM/hqdefault.jpg" alt="" aria-hidden="true">
+          <div class="video-player-overlay" id="video-player-overlay">
+            <button class="video-center-play" id="video-center-play" type="button" aria-label="Phát video">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            </button>
+            <div class="video-player-status" id="video-player-status" role="status" aria-live="polite">Đang tải trình phát...</div>
+            <div class="video-controls" id="video-controls">
+              <input class="video-seek" id="video-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Tiến độ video" disabled>
+              <div class="video-controls-row">
+                <button class="video-control-button" id="video-play-toggle" type="button" aria-label="Phát video" title="Phát">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                </button>
+                <button class="video-control-button" id="video-mute-toggle" type="button" aria-label="Tắt tiếng" title="Tắt tiếng">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm12.5 3a3.5 3.5 0 0 0-2-3.16v6.32a3.5 3.5 0 0 0 2-3.16zm-2-8.77v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z" fill="currentColor"/></svg>
+                </button>
+                <input class="video-volume" id="video-volume" type="range" min="0" max="100" value="100" step="1" aria-label="Âm lượng">
+                <span class="video-time" id="video-time" aria-live="off">0:00 / 0:00</span>
+                <span class="video-controls-spacer"></span>
+                <button class="video-control-button" id="video-fullscreen-toggle" type="button" aria-label="Toàn màn hình" title="Toàn màn hình">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v2H6v4H4V4zm10 0h6v6h-2V6h-4V4zM4 14h2v4h4v2H4v-6zm14 0h2v6h-6v-2h4v-4z" fill="currentColor"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="video-player-note">Dùng nút phát và biểu tượng loa trên thanh điều khiển YouTube để xem và chỉnh âm lượng.</p>
+      <p class="video-player-note">Thanh điều khiển sẽ tự ẩn khi video đang phát. Rê chuột hoặc chạm vào video để hiện lại.</p>
       <a class="button-secondary video-player-back" href="./#video">← Quay lại UTxanh</a>
     </article>
   </main>
+  <script src="video-player.js" defer></script>
 </body>
 </html>
